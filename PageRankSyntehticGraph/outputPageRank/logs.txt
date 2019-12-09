@@ -1,0 +1,2262 @@
+Running Spark version 2.3.1
+Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Submitted application: PageRank
+Changing view acls to: stephendorris
+Changing modify acls to: stephendorris
+Changing view acls groups to: 
+Changing modify acls groups to: 
+SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(stephendorris); groups with view permissions: Set(); users  with modify permissions: Set(stephendorris); groups with modify permissions: Set()
+Successfully started service 'sparkDriver' on port 56237.
+Registering MapOutputTracker
+Registering BlockManagerMaster
+Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+BlockManagerMasterEndpoint up
+Created local directory at /private/var/folders/3r/5j1kl2790z35gg22t7q_g4sw0000gn/T/blockmgr-c0f9f27d-fb6b-42fa-b68f-9fdde06c1ff6
+MemoryStore started with capacity 912.3 MB
+Registering OutputCommitCoordinator
+Logging initialized @2415ms
+jetty-9.3.z-SNAPSHOT
+Started @2513ms
+Started ServerConnector@24bdb479{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Successfully started service 'SparkUI' on port 4040.
+Started o.s.j.s.ServletContextHandler@5b444398{/jobs,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@422c3c7a{/jobs/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1fcb4808{/jobs/job,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@ea9b7c6{/jobs/job/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@6f8f9349{/stages,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4fbda97b{/stages/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4879f0f2{/stages/stage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4678a2eb{/stages/stage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1fdfafd2{/stages/pool,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@f73dcd6{/stages/pool/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@6f2cb653{/storage,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@61884cb1{/storage/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@79da1ec0{/storage/rdd,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@62ea3440{/storage/rdd/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@749c877b{/environment,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@2b95e48b{/environment/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@6c6c5427{/executors,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@1d8062d2{/executors/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@295eaa7c{/executors/threadDump,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@388ba540{/executors/threadDump/json,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@3d484181{/static,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@53f48368{/,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@a8c1f44{/api,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@75e01201{/jobs/job/kill,null,AVAILABLE,@Spark}
+Started o.s.j.s.ServletContextHandler@4baf352a{/stages/stage/kill,null,AVAILABLE,@Spark}
+Bound SparkUI to 0.0.0.0, and started at http://10.110.21.151:4040
+Starting executor ID driver on host localhost
+Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56238.
+Server created on 10.110.21.151:56238
+Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+Registering BlockManager BlockManagerId(driver, 10.110.21.151, 56238, None)
+Registering block manager 10.110.21.151:56238 with 912.3 MB RAM, BlockManagerId(driver, 10.110.21.151, 56238, None)
+Registered BlockManager BlockManagerId(driver, 10.110.21.151, 56238, None)
+Initialized BlockManager: BlockManagerId(driver, 10.110.21.151, 56238, None)
+Started o.s.j.s.ServletContextHandler@415e0bcb{/metrics/json,null,AVAILABLE,@Spark}
+Block broadcast_0 stored as values in memory (estimated size 24.0 B, free 912.3 MB)
+Block broadcast_0_piece0 stored as bytes in memory (estimated size 119.0 B, free 912.3 MB)
+Added broadcast_0_piece0 in memory on 10.110.21.151:56238 (size: 119.0 B, free: 912.3 MB)
+Created broadcast 0 from broadcast at PageRank.scala:47
+Block broadcast_1 stored as values in memory (estimated size 24.0 B, free 912.3 MB)
+Block broadcast_1_piece0 stored as bytes in memory (estimated size 119.0 B, free 912.3 MB)
+Added broadcast_1_piece0 in memory on 10.110.21.151:56238 (size: 119.0 B, free: 912.3 MB)
+Created broadcast 1 from broadcast at PageRank.scala:48
+Block broadcast_2 stored as values in memory (estimated size 24.0 B, free 912.3 MB)
+Block broadcast_2_piece0 stored as bytes in memory (estimated size 119.0 B, free 912.3 MB)
+Added broadcast_2_piece0 in memory on 10.110.21.151:56238 (size: 119.0 B, free: 912.3 MB)
+Created broadcast 2 from broadcast at PageRank.scala:49
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 1 (parallelize at PageRank.scala:62)
+Registering RDD 5 (flatMap at PageRank.scala:72)
+Got job 0 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 3 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 2)
+Missing parents: List(ShuffleMapStage 2)
+Submitting ShuffleMapStage 0 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_3 stored as values in memory (estimated size 2032.0 B, free 912.3 MB)
+Block broadcast_3_piece0 stored as bytes in memory (estimated size 1309.0 B, free 912.3 MB)
+Added broadcast_3_piece0 in memory on 10.110.21.151:56238 (size: 1309.0 B, free: 912.3 MB)
+Created broadcast 3 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 0 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 0.0 with 2 tasks
+Submitting ShuffleMapStage 1 (ParallelCollectionRDD[1] at parallelize at PageRank.scala:62), which has no missing parents
+Block broadcast_4 stored as values in memory (estimated size 2032.0 B, free 912.3 MB)
+Block broadcast_4_piece0 stored as bytes in memory (estimated size 1309.0 B, free 912.3 MB)
+Added broadcast_4_piece0 in memory on 10.110.21.151:56238 (size: 1309.0 B, free: 912.3 MB)
+Created broadcast 4 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 1 (ParallelCollectionRDD[1] at parallelize at PageRank.scala:62) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 1.0 with 2 tasks
+Stage 0 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 0.0 (TID 0)
+Block rdd_0_0 stored as values in memory (estimated size 408.7 KB, free 911.9 MB)
+Added rdd_0_0 in memory on 10.110.21.151:56238 (size: 408.7 KB, free: 911.9 MB)
+Finished task 0.0 in stage 0.0 (TID 0). 940 bytes result sent to driver
+Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 197750 bytes)
+Running task 1.0 in stage 0.0 (TID 1)
+Finished task 0.0 in stage 0.0 (TID 0) in 392 ms on localhost (executor driver) (1/2)
+Block rdd_0_1 stored as values in memory (estimated size 408.7 KB, free 911.5 MB)
+Added rdd_0_1 in memory on 10.110.21.151:56238 (size: 408.7 KB, free: 911.5 MB)
+Finished task 1.0 in stage 0.0 (TID 1). 897 bytes result sent to driver
+Stage 1 contains a task of very large size (105 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 1.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 107942 bytes)
+Finished task 1.0 in stage 0.0 (TID 1) in 104 ms on localhost (executor driver) (2/2)
+Running task 0.0 in stage 1.0 (TID 2)
+Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ShuffleMapStage 0 (parallelize at PageRank.scala:53) finished in 0.562 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 1)
+waiting: Set(ShuffleMapStage 2, ResultStage 3)
+failed: Set()
+Block rdd_1_0 stored as values in memory (estimated size 175.8 KB, free 911.3 MB)
+Added rdd_1_0 in memory on 10.110.21.151:56238 (size: 175.8 KB, free: 911.3 MB)
+Finished task 0.0 in stage 1.0 (TID 2). 897 bytes result sent to driver
+Starting task 1.0 in stage 1.0 (TID 3, localhost, executor driver, partition 1, PROCESS_LOCAL, 107962 bytes)
+Finished task 0.0 in stage 1.0 (TID 2) in 62 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 1.0 (TID 3)
+Block rdd_1_1 stored as values in memory (estimated size 175.8 KB, free 911.2 MB)
+Added rdd_1_1 in memory on 10.110.21.151:56238 (size: 175.8 KB, free: 911.2 MB)
+Finished task 1.0 in stage 1.0 (TID 3). 897 bytes result sent to driver
+Finished task 1.0 in stage 1.0 (TID 3) in 47 ms on localhost (executor driver) (2/2)
+Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ShuffleMapStage 1 (parallelize at PageRank.scala:62) finished in 0.589 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ShuffleMapStage 2, ResultStage 3)
+failed: Set()
+Submitting ShuffleMapStage 2 (MapPartitionsRDD[5] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_5 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_5_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.2 MB)
+Created broadcast 5 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[5] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 2.0 with 2 tasks
+Starting task 0.0 in stage 2.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 2.0 (TID 4)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 8 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 2.0 (TID 4). 1327 bytes result sent to driver
+Starting task 1.0 in stage 2.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Running task 1.0 in stage 2.0 (TID 5)
+Finished task 0.0 in stage 2.0 (TID 4) in 390 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 2.0 (TID 5). 1327 bytes result sent to driver
+Finished task 1.0 in stage 2.0 (TID 5) in 297 ms on localhost (executor driver) (2/2)
+Removed TaskSet 2.0, whose tasks have all completed, from pool 
+ShuffleMapStage 2 (flatMap at PageRank.scala:72) finished in 0.705 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 3)
+failed: Set()
+Submitting ResultStage 3 (ShuffledRDD[6] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_6 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_6_piece0 stored as bytes in memory (estimated size 2046.0 B, free 911.1 MB)
+Added broadcast_6_piece0 in memory on 10.110.21.151:56238 (size: 2046.0 B, free: 911.2 MB)
+Created broadcast 6 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 3 (ShuffledRDD[6] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 3.0 with 1 tasks
+Starting task 0.0 in stage 3.0 (TID 6, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 3.0 (TID 6)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 3.0 (TID 6). 1392 bytes result sent to driver
+Finished task 0.0 in stage 3.0 (TID 6) in 68 ms on localhost (executor driver) (1/1)
+Removed TaskSet 3.0, whose tasks have all completed, from pool 
+ResultStage 3 (lookup at PageRank.scala:76) finished in 0.076 s
+Job 0 finished: lookup at PageRank.scala:76, took 1.864291 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 10 (map at PageRank.scala:81)
+Registering RDD 14 (flatMap at PageRank.scala:72)
+Got job 1 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 11 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 10)
+Missing parents: List(ShuffleMapStage 10)
+Submitting ShuffleMapStage 8 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_7 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_7_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_7_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.2 MB)
+Created broadcast 7 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 8 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 8.0 with 2 tasks
+Submitting ShuffleMapStage 6 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_8 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_8_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_8_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 8 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 6 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 6.0 with 2 tasks
+Stage 8 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 8.0 (TID 7, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 8.0 (TID 7)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 8.0 (TID 7). 983 bytes result sent to driver
+Stage 6 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 6.0 (TID 8, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Finished task 0.0 in stage 8.0 (TID 7) in 51 ms on localhost (executor driver) (1/2)
+Running task 0.0 in stage 6.0 (TID 8)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 6.0 (TID 8). 983 bytes result sent to driver
+Starting task 1.0 in stage 6.0 (TID 9, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 6.0 (TID 9)
+Finished task 0.0 in stage 6.0 (TID 8) in 52 ms on localhost (executor driver) (1/2)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 6.0 (TID 9). 983 bytes result sent to driver
+Starting task 1.0 in stage 8.0 (TID 10, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 1.0 in stage 6.0 (TID 9) in 49 ms on localhost (executor driver) (2/2)
+Running task 1.0 in stage 8.0 (TID 10)
+Removed TaskSet 6.0, whose tasks have all completed, from pool 
+ShuffleMapStage 6 (parallelize at PageRank.scala:53) finished in 0.131 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 8)
+waiting: Set(ShuffleMapStage 9, ShuffleMapStage 10, ResultStage 11)
+failed: Set()
+Submitting ShuffleMapStage 9 (MapPartitionsRDD[10] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_9 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_9_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_9_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 9 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[10] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 9.0 with 2 tasks
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 8.0 (TID 10). 983 bytes result sent to driver
+Starting task 0.0 in stage 9.0 (TID 11, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Running task 0.0 in stage 9.0 (TID 11)
+Finished task 1.0 in stage 8.0 (TID 10) in 36 ms on localhost (executor driver) (2/2)
+Removed TaskSet 8.0, whose tasks have all completed, from pool 
+ShuffleMapStage 8 (parallelize at PageRank.scala:53) finished in 0.163 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 9)
+waiting: Set(ShuffleMapStage 10, ResultStage 11)
+failed: Set()
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 9.0 (TID 11). 1327 bytes result sent to driver
+Starting task 1.0 in stage 9.0 (TID 12, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Finished task 0.0 in stage 9.0 (TID 11) in 185 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 9.0 (TID 12)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 9.0 (TID 12). 1327 bytes result sent to driver
+Finished task 1.0 in stage 9.0 (TID 12) in 198 ms on localhost (executor driver) (2/2)
+Removed TaskSet 9.0, whose tasks have all completed, from pool 
+ShuffleMapStage 9 (map at PageRank.scala:81) finished in 0.407 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ShuffleMapStage 10, ResultStage 11)
+failed: Set()
+Submitting ShuffleMapStage 10 (MapPartitionsRDD[14] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_10 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_10_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_10_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 10 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[14] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 10.0 with 2 tasks
+Starting task 0.0 in stage 10.0 (TID 13, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 10.0 (TID 13)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 10.0 (TID 13). 1327 bytes result sent to driver
+Starting task 1.0 in stage 10.0 (TID 14, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 10.0 (TID 13) in 251 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 10.0 (TID 14)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 1.0 in stage 10.0 (TID 14). 1327 bytes result sent to driver
+Finished task 1.0 in stage 10.0 (TID 14) in 215 ms on localhost (executor driver) (2/2)
+Removed TaskSet 10.0, whose tasks have all completed, from pool 
+ShuffleMapStage 10 (flatMap at PageRank.scala:72) finished in 0.472 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 11)
+failed: Set()
+Submitting ResultStage 11 (ShuffledRDD[15] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_11 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_11_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_11_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 11 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 11 (ShuffledRDD[15] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 11.0 with 1 tasks
+Starting task 0.0 in stage 11.0 (TID 15, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 11.0 (TID 15)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 11.0 (TID 15). 1349 bytes result sent to driver
+Finished task 0.0 in stage 11.0 (TID 15) in 60 ms on localhost (executor driver) (1/1)
+Removed TaskSet 11.0, whose tasks have all completed, from pool 
+ResultStage 11 (lookup at PageRank.scala:76) finished in 0.068 s
+Job 1 finished: lookup at PageRank.scala:76, took 1.093800 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 19 (map at PageRank.scala:81)
+Registering RDD 23 (flatMap at PageRank.scala:72)
+Got job 2 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 23 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 22)
+Missing parents: List(ShuffleMapStage 22)
+Submitting ShuffleMapStage 20 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_12 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_12_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_12_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 12 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 20 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 20.0 with 2 tasks
+Submitting ShuffleMapStage 19 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_13 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_13_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_13_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 13 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 19 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 19.0 with 2 tasks
+Stage 20 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 20.0 (TID 16, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 20.0 (TID 16)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 20.0 (TID 16). 983 bytes result sent to driver
+Stage 19 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 19.0 (TID 17, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Finished task 0.0 in stage 20.0 (TID 16) in 60 ms on localhost (executor driver) (1/2)
+Running task 0.0 in stage 19.0 (TID 17)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 19.0 (TID 17). 983 bytes result sent to driver
+Starting task 1.0 in stage 19.0 (TID 18, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 0.0 in stage 19.0 (TID 17) in 60 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 19.0 (TID 18)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 19.0 (TID 18). 983 bytes result sent to driver
+Starting task 1.0 in stage 20.0 (TID 19, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 1.0 in stage 19.0 (TID 18) in 61 ms on localhost (executor driver) (2/2)
+Running task 1.0 in stage 20.0 (TID 19)
+Removed TaskSet 19.0, whose tasks have all completed, from pool 
+ShuffleMapStage 19 (parallelize at PageRank.scala:53) finished in 0.155 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 20)
+waiting: Set(ShuffleMapStage 21, ShuffleMapStage 22, ResultStage 23)
+failed: Set()
+Submitting ShuffleMapStage 21 (MapPartitionsRDD[19] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_14 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_14_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_14_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 14 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 21 (MapPartitionsRDD[19] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 21.0 with 2 tasks
+Found block rdd_0_1 locally
+Cleaned accumulator 129
+Cleaned accumulator 139
+Cleaned accumulator 206
+Cleaned accumulator 145
+Cleaned accumulator 209
+Cleaned accumulator 149
+Cleaned accumulator 160
+Cleaned accumulator 147
+Cleaned accumulator 203
+Cleaned accumulator 177
+Cleaned accumulator 213
+Cleaned accumulator 219
+Cleaned accumulator 182
+Cleaned accumulator 169
+Cleaned accumulator 217
+Cleaned accumulator 134
+Cleaned accumulator 197
+Finished task 1.0 in stage 20.0 (TID 19). 1026 bytes result sent to driver
+Starting task 0.0 in stage 21.0 (TID 20, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Finished task 1.0 in stage 20.0 (TID 19) in 56 ms on localhost (executor driver) (2/2)
+Removed TaskSet 20.0, whose tasks have all completed, from pool 
+ShuffleMapStage 20 (parallelize at PageRank.scala:53) finished in 0.206 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 21)
+waiting: Set(ShuffleMapStage 22, ResultStage 23)
+failed: Set()
+Running task 0.0 in stage 21.0 (TID 20)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Removed broadcast_3_piece0 on 10.110.21.151:56238 in memory (size: 1309.0 B, free: 911.1 MB)
+Cleaned accumulator 200
+Cleaned accumulator 124
+Cleaned accumulator 174
+Removed broadcast_9_piece0 on 10.110.21.151:56238 in memory (size: 3.1 KB, free: 911.1 MB)
+Cleaned accumulator 224
+Cleaned accumulator 106
+Cleaned accumulator 104
+Cleaned accumulator 153
+Cleaned accumulator 151
+Cleaned accumulator 140
+Cleaned accumulator 184
+Cleaned accumulator 131
+Cleaned accumulator 136
+Removed broadcast_7_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 208
+Cleaned accumulator 215
+Cleaned accumulator 167
+Cleaned accumulator 168
+Cleaned accumulator 180
+Removed broadcast_11_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Cleaned accumulator 179
+Cleaned accumulator 142
+Cleaned accumulator 189
+Cleaned accumulator 146
+Cleaned accumulator 194
+Cleaned accumulator 176
+Cleaned accumulator 162
+Cleaned accumulator 207
+Cleaned accumulator 130
+Removed broadcast_10_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Cleaned accumulator 138
+Cleaned accumulator 183
+Cleaned accumulator 175
+Removed broadcast_6_piece0 on 10.110.21.151:56238 in memory (size: 2046.0 B, free: 911.1 MB)
+Cleaned accumulator 103
+Cleaned accumulator 157
+Cleaned accumulator 220
+Cleaned accumulator 202
+Cleaned accumulator 118
+Cleaned accumulator 144
+Cleaned accumulator 196
+Cleaned accumulator 110
+Cleaned accumulator 112
+Cleaned accumulator 109
+Cleaned accumulator 210
+Cleaned accumulator 154
+Cleaned accumulator 218
+Cleaned accumulator 170
+Cleaned accumulator 114
+Cleaned accumulator 155
+Cleaned accumulator 101
+Cleaned accumulator 108
+Cleaned accumulator 119
+Cleaned accumulator 164
+Cleaned accumulator 166
+Cleaned accumulator 161
+Cleaned accumulator 201
+Cleaned accumulator 116
+Cleaned accumulator 191
+Cleaned accumulator 205
+Cleaned accumulator 223
+Cleaned accumulator 132
+Cleaned accumulator 188
+Cleaned accumulator 143
+Cleaned accumulator 100
+Cleaned accumulator 150
+Removed broadcast_8_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 113
+Cleaned accumulator 148
+Cleaned accumulator 222
+Cleaned accumulator 195
+Cleaned accumulator 159
+Cleaned accumulator 178
+Cleaned accumulator 165
+Cleaned accumulator 204
+Cleaned accumulator 102
+Cleaned accumulator 163
+Cleaned accumulator 190
+Cleaned accumulator 187
+Cleaned accumulator 122
+Removed broadcast_4_piece0 on 10.110.21.151:56238 in memory (size: 1309.0 B, free: 911.2 MB)
+Cleaned accumulator 192
+Cleaned accumulator 185
+Cleaned accumulator 211
+Cleaned accumulator 152
+Cleaned accumulator 186
+Removed broadcast_5_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.2 MB)
+Cleaned accumulator 214
+Cleaned accumulator 172
+Cleaned accumulator 126
+Cleaned accumulator 193
+Cleaned accumulator 117
+Cleaned accumulator 158
+Cleaned accumulator 121
+Cleaned accumulator 181
+Cleaned accumulator 135
+Cleaned accumulator 137
+Cleaned accumulator 105
+Cleaned accumulator 171
+Cleaned accumulator 199
+Cleaned accumulator 128
+Cleaned accumulator 216
+Removed broadcast_13_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.2 MB)
+Cleaned accumulator 173
+Cleaned accumulator 198
+Cleaned accumulator 111
+Cleaned accumulator 221
+Cleaned accumulator 127
+Cleaned accumulator 133
+Cleaned accumulator 107
+Cleaned accumulator 115
+Cleaned accumulator 120
+Cleaned accumulator 123
+Cleaned accumulator 212
+Cleaned accumulator 125
+Cleaned accumulator 141
+Cleaned accumulator 156
+Finished task 0.0 in stage 21.0 (TID 20). 1327 bytes result sent to driver
+Starting task 1.0 in stage 21.0 (TID 21, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Finished task 0.0 in stage 21.0 (TID 20) in 106 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 21.0 (TID 21)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 21.0 (TID 21). 1327 bytes result sent to driver
+Finished task 1.0 in stage 21.0 (TID 21) in 136 ms on localhost (executor driver) (2/2)
+Removed TaskSet 21.0, whose tasks have all completed, from pool 
+ShuffleMapStage 21 (map at PageRank.scala:81) finished in 0.283 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ShuffleMapStage 22, ResultStage 23)
+failed: Set()
+Submitting ShuffleMapStage 22 (MapPartitionsRDD[23] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_15 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_15_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_15_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.2 MB)
+Created broadcast 15 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 22 (MapPartitionsRDD[23] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 22.0 with 2 tasks
+Starting task 0.0 in stage 22.0 (TID 22, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 22.0 (TID 22)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 22.0 (TID 22). 1327 bytes result sent to driver
+Starting task 1.0 in stage 22.0 (TID 23, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 22.0 (TID 22) in 112 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 22.0 (TID 23)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 22.0 (TID 23). 1284 bytes result sent to driver
+Finished task 1.0 in stage 22.0 (TID 23) in 99 ms on localhost (executor driver) (2/2)
+Removed TaskSet 22.0, whose tasks have all completed, from pool 
+ShuffleMapStage 22 (flatMap at PageRank.scala:72) finished in 0.216 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 23)
+failed: Set()
+Submitting ResultStage 23 (ShuffledRDD[24] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_16 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_16_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_16_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 16 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 23 (ShuffledRDD[24] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 23.0 with 1 tasks
+Starting task 0.0 in stage 23.0 (TID 24, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 23.0 (TID 24)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 23.0 (TID 24). 1349 bytes result sent to driver
+Finished task 0.0 in stage 23.0 (TID 24) in 26 ms on localhost (executor driver) (1/1)
+Removed TaskSet 23.0, whose tasks have all completed, from pool 
+ResultStage 23 (lookup at PageRank.scala:76) finished in 0.030 s
+Job 2 finished: lookup at PageRank.scala:76, took 0.700292 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 28 (map at PageRank.scala:81)
+Registering RDD 32 (flatMap at PageRank.scala:72)
+Got job 3 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 39 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 38)
+Missing parents: List(ShuffleMapStage 38)
+Submitting ShuffleMapStage 36 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_17 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_17_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_17_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 17 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 36 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 36.0 with 2 tasks
+Submitting ShuffleMapStage 35 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_18 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_18_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_18_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 18 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 35 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 35.0 with 2 tasks
+Stage 36 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 36.0 (TID 25, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 36.0 (TID 25)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 36.0 (TID 25). 983 bytes result sent to driver
+Stage 35 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 35.0 (TID 26, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Finished task 0.0 in stage 36.0 (TID 25) in 36 ms on localhost (executor driver) (1/2)
+Running task 0.0 in stage 35.0 (TID 26)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 35.0 (TID 26). 983 bytes result sent to driver
+Starting task 1.0 in stage 35.0 (TID 27, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 0.0 in stage 35.0 (TID 26) in 36 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 35.0 (TID 27)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 35.0 (TID 27). 1026 bytes result sent to driver
+Starting task 1.0 in stage 36.0 (TID 28, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 1.0 in stage 35.0 (TID 27) in 40 ms on localhost (executor driver) (2/2)
+Removed TaskSet 35.0, whose tasks have all completed, from pool 
+Running task 1.0 in stage 36.0 (TID 28)
+ShuffleMapStage 35 (parallelize at PageRank.scala:53) finished in 0.096 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 36)
+waiting: Set(ShuffleMapStage 37, ShuffleMapStage 38, ResultStage 39)
+failed: Set()
+Submitting ShuffleMapStage 37 (MapPartitionsRDD[28] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_19 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_19_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_19_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 19 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 37 (MapPartitionsRDD[28] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 37.0 with 2 tasks
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 36.0 (TID 28). 983 bytes result sent to driver
+Starting task 0.0 in stage 37.0 (TID 29, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Finished task 1.0 in stage 36.0 (TID 28) in 31 ms on localhost (executor driver) (2/2)
+Removed TaskSet 36.0, whose tasks have all completed, from pool 
+Running task 0.0 in stage 37.0 (TID 29)
+ShuffleMapStage 36 (parallelize at PageRank.scala:53) finished in 0.121 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 37)
+waiting: Set(ShuffleMapStage 38, ResultStage 39)
+failed: Set()
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 37.0 (TID 29). 1327 bytes result sent to driver
+Starting task 1.0 in stage 37.0 (TID 30, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Finished task 0.0 in stage 37.0 (TID 29) in 77 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 37.0 (TID 30)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 1.0 in stage 37.0 (TID 30). 1327 bytes result sent to driver
+Finished task 1.0 in stage 37.0 (TID 30) in 73 ms on localhost (executor driver) (2/2)
+Removed TaskSet 37.0, whose tasks have all completed, from pool 
+ShuffleMapStage 37 (map at PageRank.scala:81) finished in 0.169 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ShuffleMapStage 38, ResultStage 39)
+failed: Set()
+Submitting ShuffleMapStage 38 (MapPartitionsRDD[32] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_20 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_20_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_20_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 20 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 38 (MapPartitionsRDD[32] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 38.0 with 2 tasks
+Starting task 0.0 in stage 38.0 (TID 31, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 38.0 (TID 31)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 38.0 (TID 31). 1327 bytes result sent to driver
+Starting task 1.0 in stage 38.0 (TID 32, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 38.0 (TID 31) in 76 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 38.0 (TID 32)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 38.0 (TID 32). 1327 bytes result sent to driver
+Finished task 1.0 in stage 38.0 (TID 32) in 65 ms on localhost (executor driver) (2/2)
+Removed TaskSet 38.0, whose tasks have all completed, from pool 
+ShuffleMapStage 38 (flatMap at PageRank.scala:72) finished in 0.144 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 39)
+failed: Set()
+Submitting ResultStage 39 (ShuffledRDD[33] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_21 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_21_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_21_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 21 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 39 (ShuffledRDD[33] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 39.0 with 1 tasks
+Starting task 0.0 in stage 39.0 (TID 33, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 39.0 (TID 33)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 39.0 (TID 33). 1306 bytes result sent to driver
+Finished task 0.0 in stage 39.0 (TID 33) in 19 ms on localhost (executor driver) (1/1)
+Removed TaskSet 39.0, whose tasks have all completed, from pool 
+ResultStage 39 (lookup at PageRank.scala:76) finished in 0.024 s
+Job 3 finished: lookup at PageRank.scala:76, took 0.448160 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 37 (map at PageRank.scala:81)
+Registering RDD 41 (flatMap at PageRank.scala:72)
+Got job 4 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 59 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 58)
+Missing parents: List(ShuffleMapStage 58)
+Submitting ShuffleMapStage 56 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_22 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_22_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_22_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 22 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 56 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 56.0 with 2 tasks
+Submitting ShuffleMapStage 55 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_23 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_23_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_23_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 23 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 55 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 55.0 with 2 tasks
+Stage 56 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 56.0 (TID 34, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 56.0 (TID 34)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 56.0 (TID 34). 983 bytes result sent to driver
+Stage 55 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 55.0 (TID 35, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 55.0 (TID 35)
+Finished task 0.0 in stage 56.0 (TID 34) in 36 ms on localhost (executor driver) (1/2)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 55.0 (TID 35). 983 bytes result sent to driver
+Starting task 1.0 in stage 55.0 (TID 36, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 55.0 (TID 36)
+Finished task 0.0 in stage 55.0 (TID 35) in 33 ms on localhost (executor driver) (1/2)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 55.0 (TID 36). 983 bytes result sent to driver
+Starting task 1.0 in stage 56.0 (TID 37, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 1.0 in stage 55.0 (TID 36) in 37 ms on localhost (executor driver) (2/2)
+Running task 1.0 in stage 56.0 (TID 37)
+Removed TaskSet 55.0, whose tasks have all completed, from pool 
+ShuffleMapStage 55 (parallelize at PageRank.scala:53) finished in 0.088 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 56)
+waiting: Set(ShuffleMapStage 57, ShuffleMapStage 58, ResultStage 59)
+failed: Set()
+Submitting ShuffleMapStage 57 (MapPartitionsRDD[37] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_24 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_24_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_24_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 24 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 57 (MapPartitionsRDD[37] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 57.0 with 2 tasks
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 56.0 (TID 37). 983 bytes result sent to driver
+Starting task 0.0 in stage 57.0 (TID 38, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Finished task 1.0 in stage 56.0 (TID 37) in 29 ms on localhost (executor driver) (2/2)
+Running task 0.0 in stage 57.0 (TID 38)
+Removed TaskSet 56.0, whose tasks have all completed, from pool 
+ShuffleMapStage 56 (parallelize at PageRank.scala:53) finished in 0.112 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 57)
+waiting: Set(ShuffleMapStage 58, ResultStage 59)
+failed: Set()
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 57.0 (TID 38). 1327 bytes result sent to driver
+Starting task 1.0 in stage 57.0 (TID 39, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Running task 1.0 in stage 57.0 (TID 39)
+Finished task 0.0 in stage 57.0 (TID 38) in 55 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 57.0 (TID 39). 1284 bytes result sent to driver
+Finished task 1.0 in stage 57.0 (TID 39) in 55 ms on localhost (executor driver) (2/2)
+Removed TaskSet 57.0, whose tasks have all completed, from pool 
+ShuffleMapStage 57 (map at PageRank.scala:81) finished in 0.127 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ShuffleMapStage 58, ResultStage 59)
+failed: Set()
+Submitting ShuffleMapStage 58 (MapPartitionsRDD[41] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_25 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_25_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_25_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 25 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 58 (MapPartitionsRDD[41] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 58.0 with 2 tasks
+Starting task 0.0 in stage 58.0 (TID 40, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 58.0 (TID 40)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 58.0 (TID 40). 1327 bytes result sent to driver
+Starting task 1.0 in stage 58.0 (TID 41, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Running task 1.0 in stage 58.0 (TID 41)
+Finished task 0.0 in stage 58.0 (TID 40) in 101 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 58.0 (TID 41). 1327 bytes result sent to driver
+Finished task 1.0 in stage 58.0 (TID 41) in 90 ms on localhost (executor driver) (2/2)
+Removed TaskSet 58.0, whose tasks have all completed, from pool 
+ShuffleMapStage 58 (flatMap at PageRank.scala:72) finished in 0.197 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 59)
+failed: Set()
+Submitting ResultStage 59 (ShuffledRDD[42] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_26 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_26_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_26_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 26 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 59 (ShuffledRDD[42] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 59.0 with 1 tasks
+Starting task 0.0 in stage 59.0 (TID 42, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 59.0 (TID 42)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 59.0 (TID 42). 1349 bytes result sent to driver
+Finished task 0.0 in stage 59.0 (TID 42) in 27 ms on localhost (executor driver) (1/1)
+Removed TaskSet 59.0, whose tasks have all completed, from pool 
+ResultStage 59 (lookup at PageRank.scala:76) finished in 0.033 s
+Job 4 finished: lookup at PageRank.scala:76, took 0.459091 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 46 (map at PageRank.scala:81)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 50 (flatMap at PageRank.scala:72)
+Got job 5 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 83 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 82)
+Missing parents: List(ShuffleMapStage 82)
+Submitting ShuffleMapStage 78 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_27 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_27_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_27_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 27 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 78 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 78.0 with 2 tasks
+Submitting ShuffleMapStage 81 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_28 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_28_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_28_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 28 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 81 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 81.0 with 2 tasks
+Stage 78 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 78.0 (TID 43, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 78.0 (TID 43)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 78.0 (TID 43). 983 bytes result sent to driver
+Starting task 1.0 in stage 78.0 (TID 44, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 0.0 in stage 78.0 (TID 43) in 42 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 78.0 (TID 44)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 78.0 (TID 44). 983 bytes result sent to driver
+Stage 81 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 81.0 (TID 45, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Finished task 1.0 in stage 78.0 (TID 44) in 49 ms on localhost (executor driver) (2/2)
+Removed TaskSet 78.0, whose tasks have all completed, from pool 
+ShuffleMapStage 78 (parallelize at PageRank.scala:53) finished in 0.091 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 81)
+waiting: Set(ShuffleMapStage 82, ResultStage 83, ShuffleMapStage 80)
+failed: Set()
+Submitting ShuffleMapStage 80 (MapPartitionsRDD[46] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_29 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Cleaned accumulator 311
+Cleaned accumulator 548
+Cleaned accumulator 503
+Cleaned accumulator 459
+Cleaned accumulator 482
+Cleaned accumulator 489
+Cleaned accumulator 563
+Cleaned accumulator 348
+Cleaned accumulator 574
+Cleaned accumulator 446
+Cleaned accumulator 345
+Block broadcast_29_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_29_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Running task 0.0 in stage 81.0 (TID 45)
+Removed broadcast_16_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 29 from broadcast at DAGScheduler.scala:1039
+Cleaned accumulator 443
+Submitting 2 missing tasks from ShuffleMapStage 80 (MapPartitionsRDD[46] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 80.0 with 2 tasks
+Cleaned accumulator 344
+Cleaned accumulator 322
+Cleaned accumulator 430
+Cleaned accumulator 466
+Cleaned accumulator 515
+Cleaned accumulator 432
+Cleaned accumulator 491
+Cleaned accumulator 473
+Cleaned accumulator 338
+Cleaned accumulator 401
+Cleaned accumulator 411
+Cleaned accumulator 475
+Cleaned accumulator 419
+Cleaned accumulator 402
+Cleaned accumulator 506
+Cleaned accumulator 333
+Cleaned accumulator 562
+Cleaned accumulator 554
+Cleaned accumulator 420
+Cleaned accumulator 587
+Cleaned accumulator 427
+Cleaned accumulator 551
+Cleaned accumulator 492
+Cleaned accumulator 441
+Cleaned accumulator 545
+Cleaned accumulator 483
+Cleaned accumulator 498
+Cleaned accumulator 555
+Cleaned accumulator 521
+Cleaned accumulator 448
+Cleaned accumulator 308
+Cleaned accumulator 583
+Removed broadcast_25_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Cleaned accumulator 324
+Cleaned accumulator 334
+Cleaned accumulator 569
+Cleaned accumulator 439
+Cleaned accumulator 347
+Cleaned accumulator 490
+Cleaned accumulator 486
+Cleaned accumulator 501
+Cleaned accumulator 461
+Removed broadcast_21_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Cleaned accumulator 568
+Cleaned accumulator 593
+Cleaned accumulator 450
+Cleaned accumulator 431
+Cleaned accumulator 467
+Cleaned accumulator 303
+Cleaned accumulator 487
+Cleaned accumulator 403
+Cleaned accumulator 480
+Cleaned accumulator 592
+Cleaned accumulator 449
+Cleaned accumulator 500
+Cleaned accumulator 523
+Cleaned accumulator 464
+Cleaned accumulator 595
+Cleaned accumulator 416
+Cleaned accumulator 540
+Cleaned accumulator 553
+Cleaned accumulator 558
+Cleaned accumulator 406
+Cleaned accumulator 476
+Cleaned accumulator 424
+Cleaned accumulator 451
+Cleaned accumulator 580
+Cleaned accumulator 495
+Cleaned accumulator 435
+Cleaned accumulator 320
+Cleaned accumulator 520
+Cleaned accumulator 342
+Cleaned accumulator 332
+Cleaned accumulator 493
+Cleaned accumulator 440
+Cleaned accumulator 331
+Cleaned accumulator 582
+Cleaned accumulator 341
+Cleaned accumulator 404
+Cleaned accumulator 543
+Cleaned accumulator 460
+Cleaned accumulator 494
+Cleaned accumulator 565
+Cleaned accumulator 310
+Cleaned accumulator 528
+Cleaned accumulator 581
+Cleaned accumulator 301
+Cleaned accumulator 557
+Cleaned accumulator 588
+Cleaned accumulator 447
+Cleaned accumulator 526
+Cleaned accumulator 313
+Cleaned accumulator 425
+Cleaned accumulator 527
+Cleaned accumulator 537
+Cleaned accumulator 343
+Cleaned accumulator 536
+Cleaned accumulator 511
+Cleaned accumulator 566
+Cleaned accumulator 438
+Cleaned accumulator 525
+Cleaned accumulator 510
+Cleaned accumulator 546
+Cleaned accumulator 571
+Cleaned accumulator 323
+Cleaned accumulator 422
+Cleaned accumulator 423
+Cleaned accumulator 326
+Cleaned accumulator 538
+Cleaned accumulator 317
+Cleaned accumulator 589
+Cleaned accumulator 444
+Cleaned accumulator 434
+Cleaned accumulator 454
+Cleaned accumulator 524
+Cleaned accumulator 559
+Cleaned accumulator 572
+Cleaned accumulator 531
+Cleaned accumulator 330
+Cleaned accumulator 564
+Cleaned accumulator 421
+Cleaned accumulator 437
+Cleaned accumulator 517
+Cleaned accumulator 488
+Cleaned accumulator 462
+Cleaned accumulator 560
+Cleaned accumulator 477
+Cleaned accumulator 436
+Cleaned accumulator 328
+Cleaned accumulator 529
+Cleaned accumulator 507
+Cleaned accumulator 327
+Cleaned accumulator 599
+Cleaned accumulator 594
+Cleaned accumulator 516
+Cleaned accumulator 407
+Cleaned accumulator 452
+Cleaned accumulator 339
+Cleaned accumulator 530
+Cleaned accumulator 305
+Cleaned accumulator 549
+Cleaned accumulator 307
+Cleaned accumulator 505
+Cleaned accumulator 414
+Cleaned accumulator 316
+Cleaned accumulator 412
+Cleaned accumulator 472
+Cleaned accumulator 418
+Cleaned accumulator 456
+Cleaned accumulator 314
+Cleaned accumulator 597
+Cleaned accumulator 512
+Cleaned accumulator 469
+Cleaned accumulator 408
+Cleaned accumulator 556
+Cleaned accumulator 481
+Cleaned accumulator 513
+Cleaned accumulator 415
+Cleaned accumulator 544
+Cleaned accumulator 335
+Cleaned accumulator 550
+Cleaned accumulator 309
+Cleaned accumulator 453
+Cleaned accumulator 547
+Cleaned accumulator 570
+Cleaned accumulator 535
+Cleaned accumulator 340
+Removed broadcast_17_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 509
+Cleaned accumulator 586
+Cleaned accumulator 470
+Cleaned accumulator 478
+Cleaned accumulator 514
+Cleaned accumulator 485
+Removed broadcast_19_piece0 on 10.110.21.151:56238 in memory (size: 3.1 KB, free: 911.1 MB)
+Cleaned accumulator 573
+Cleaned accumulator 429
+Cleaned accumulator 463
+Cleaned accumulator 578
+Cleaned accumulator 410
+Cleaned accumulator 329
+Cleaned accumulator 575
+Cleaned accumulator 413
+Cleaned accumulator 542
+Cleaned accumulator 576
+Cleaned accumulator 428
+Cleaned accumulator 496
+Cleaned accumulator 445
+Cleaned accumulator 306
+Cleaned accumulator 325
+Cleaned accumulator 302
+Cleaned accumulator 504
+Cleaned accumulator 484
+Cleaned accumulator 319
+Cleaned accumulator 426
+Cleaned accumulator 474
+Cleaned accumulator 518
+Removed broadcast_20_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Found block rdd_0_0 locally
+Cleaned accumulator 455
+Removed broadcast_23_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Removed broadcast_24_piece0 on 10.110.21.151:56238 in memory (size: 3.1 KB, free: 911.1 MB)
+Removed broadcast_18_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 417
+Cleaned accumulator 596
+Cleaned accumulator 315
+Cleaned accumulator 457
+Cleaned accumulator 534
+Cleaned accumulator 590
+Cleaned accumulator 561
+Cleaned accumulator 584
+Cleaned accumulator 471
+Cleaned accumulator 499
+Cleaned accumulator 567
+Cleaned accumulator 585
+Cleaned accumulator 300
+Cleaned accumulator 508
+Cleaned accumulator 304
+Cleaned accumulator 349
+Cleaned accumulator 465
+Cleaned accumulator 541
+Cleaned accumulator 336
+Cleaned accumulator 442
+Cleaned accumulator 318
+Cleaned accumulator 468
+Cleaned accumulator 400
+Cleaned accumulator 533
+Cleaned accumulator 577
+Cleaned accumulator 519
+Cleaned accumulator 321
+Cleaned accumulator 312
+Cleaned accumulator 579
+Cleaned accumulator 405
+Removed broadcast_22_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 598
+Cleaned accumulator 522
+Removed broadcast_26_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Cleaned accumulator 409
+Cleaned accumulator 433
+Cleaned accumulator 502
+Cleaned accumulator 458
+Cleaned accumulator 539
+Cleaned accumulator 479
+Cleaned accumulator 497
+Cleaned accumulator 532
+Cleaned accumulator 552
+Removed broadcast_15_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Cleaned accumulator 346
+Cleaned accumulator 337
+Cleaned accumulator 591
+Finished task 0.0 in stage 81.0 (TID 45). 983 bytes result sent to driver
+Starting task 0.0 in stage 80.0 (TID 46, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Finished task 0.0 in stage 81.0 (TID 45) in 59 ms on localhost (executor driver) (1/2)
+Running task 0.0 in stage 80.0 (TID 46)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 80.0 (TID 46). 1327 bytes result sent to driver
+Starting task 1.0 in stage 80.0 (TID 47, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Running task 1.0 in stage 80.0 (TID 47)
+Finished task 0.0 in stage 80.0 (TID 46) in 64 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 80.0 (TID 47). 1284 bytes result sent to driver
+Starting task 1.0 in stage 81.0 (TID 48, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 81.0 (TID 48)
+Finished task 1.0 in stage 80.0 (TID 47) in 60 ms on localhost (executor driver) (2/2)
+Removed TaskSet 80.0, whose tasks have all completed, from pool 
+ShuffleMapStage 80 (map at PageRank.scala:81) finished in 0.168 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 81)
+waiting: Set(ShuffleMapStage 82, ResultStage 83)
+failed: Set()
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 81.0 (TID 48). 1026 bytes result sent to driver
+Finished task 1.0 in stage 81.0 (TID 48) in 24 ms on localhost (executor driver) (2/2)
+Removed TaskSet 81.0, whose tasks have all completed, from pool 
+ShuffleMapStage 81 (parallelize at PageRank.scala:53) finished in 0.265 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ShuffleMapStage 82, ResultStage 83)
+failed: Set()
+Submitting ShuffleMapStage 82 (MapPartitionsRDD[50] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_30 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_30_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_30_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 30 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 82 (MapPartitionsRDD[50] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 82.0 with 2 tasks
+Starting task 0.0 in stage 82.0 (TID 49, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 82.0 (TID 49)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 82.0 (TID 49). 1327 bytes result sent to driver
+Starting task 1.0 in stage 82.0 (TID 50, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 82.0 (TID 49) in 60 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 82.0 (TID 50)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 82.0 (TID 50). 1327 bytes result sent to driver
+Finished task 1.0 in stage 82.0 (TID 50) in 78 ms on localhost (executor driver) (2/2)
+Removed TaskSet 82.0, whose tasks have all completed, from pool 
+ShuffleMapStage 82 (flatMap at PageRank.scala:72) finished in 0.142 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 83)
+failed: Set()
+Submitting ResultStage 83 (ShuffledRDD[51] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_31 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_31_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_31_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 31 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 83 (ShuffledRDD[51] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 83.0 with 1 tasks
+Starting task 0.0 in stage 83.0 (TID 51, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 83.0 (TID 51)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 83.0 (TID 51). 1349 bytes result sent to driver
+Finished task 0.0 in stage 83.0 (TID 51) in 27 ms on localhost (executor driver) (1/1)
+Removed TaskSet 83.0, whose tasks have all completed, from pool 
+ResultStage 83 (lookup at PageRank.scala:76) finished in 0.030 s
+Job 5 finished: lookup at PageRank.scala:76, took 0.452972 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 55 (map at PageRank.scala:81)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 59 (flatMap at PageRank.scala:72)
+Got job 6 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 111 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 110)
+Missing parents: List(ShuffleMapStage 110)
+Submitting ShuffleMapStage 107 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_32 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_32_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_32_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 32 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 107 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 107.0 with 2 tasks
+Submitting ShuffleMapStage 109 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_33 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_33_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_33_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 33 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 109 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 109.0 with 2 tasks
+Stage 107 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 107.0 (TID 52, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 107.0 (TID 52)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 107.0 (TID 52). 983 bytes result sent to driver
+Starting task 1.0 in stage 107.0 (TID 53, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 0.0 in stage 107.0 (TID 52) in 37 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 107.0 (TID 53)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 107.0 (TID 53). 983 bytes result sent to driver
+Stage 109 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 109.0 (TID 54, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 109.0 (TID 54)
+Finished task 1.0 in stage 107.0 (TID 53) in 26 ms on localhost (executor driver) (2/2)
+Removed TaskSet 107.0, whose tasks have all completed, from pool 
+ShuffleMapStage 107 (parallelize at PageRank.scala:53) finished in 0.060 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 109)
+waiting: Set(ResultStage 111, ShuffleMapStage 108, ShuffleMapStage 110)
+failed: Set()
+Submitting ShuffleMapStage 108 (MapPartitionsRDD[55] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_34 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_34_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_34_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 34 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 108 (MapPartitionsRDD[55] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 108.0 with 2 tasks
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 109.0 (TID 54). 983 bytes result sent to driver
+Starting task 0.0 in stage 108.0 (TID 55, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Running task 0.0 in stage 108.0 (TID 55)
+Finished task 0.0 in stage 109.0 (TID 54) in 27 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 108.0 (TID 55). 1327 bytes result sent to driver
+Starting task 1.0 in stage 108.0 (TID 56, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Finished task 0.0 in stage 108.0 (TID 55) in 48 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 108.0 (TID 56)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 108.0 (TID 56). 1284 bytes result sent to driver
+Starting task 1.0 in stage 109.0 (TID 57, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 109.0 (TID 57)
+Finished task 1.0 in stage 108.0 (TID 56) in 51 ms on localhost (executor driver) (2/2)
+Removed TaskSet 108.0, whose tasks have all completed, from pool 
+ShuffleMapStage 108 (map at PageRank.scala:81) finished in 0.117 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 109)
+waiting: Set(ResultStage 111, ShuffleMapStage 110)
+failed: Set()
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 109.0 (TID 57). 983 bytes result sent to driver
+Finished task 1.0 in stage 109.0 (TID 57) in 19 ms on localhost (executor driver) (2/2)
+Removed TaskSet 109.0, whose tasks have all completed, from pool 
+ShuffleMapStage 109 (parallelize at PageRank.scala:53) finished in 0.187 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 111, ShuffleMapStage 110)
+failed: Set()
+Submitting ShuffleMapStage 110 (MapPartitionsRDD[59] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_35 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_35_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_35_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 35 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 110 (MapPartitionsRDD[59] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 110.0 with 2 tasks
+Starting task 0.0 in stage 110.0 (TID 58, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 110.0 (TID 58)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 110.0 (TID 58). 1284 bytes result sent to driver
+Starting task 1.0 in stage 110.0 (TID 59, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 110.0 (TID 58) in 61 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 110.0 (TID 59)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 110.0 (TID 59). 1327 bytes result sent to driver
+Finished task 1.0 in stage 110.0 (TID 59) in 69 ms on localhost (executor driver) (2/2)
+Removed TaskSet 110.0, whose tasks have all completed, from pool 
+ShuffleMapStage 110 (flatMap at PageRank.scala:72) finished in 0.133 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 111)
+failed: Set()
+Submitting ResultStage 111 (ShuffledRDD[60] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_36 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_36_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_36_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 36 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 111 (ShuffledRDD[60] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 111.0 with 1 tasks
+Starting task 0.0 in stage 111.0 (TID 60, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 111.0 (TID 60)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 111.0 (TID 60). 1349 bytes result sent to driver
+Finished task 0.0 in stage 111.0 (TID 60) in 17 ms on localhost (executor driver) (1/1)
+Removed TaskSet 111.0, whose tasks have all completed, from pool 
+ResultStage 111 (lookup at PageRank.scala:76) finished in 0.020 s
+Job 6 finished: lookup at PageRank.scala:76, took 0.350230 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 64 (map at PageRank.scala:81)
+Registering RDD 68 (flatMap at PageRank.scala:72)
+Got job 7 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 143 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 142)
+Missing parents: List(ShuffleMapStage 142)
+Submitting ShuffleMapStage 140 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_37 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_37_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_37_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 37 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 140 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 140.0 with 2 tasks
+Submitting ShuffleMapStage 138 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_38 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_38_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_38_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 38 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 138 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 138.0 with 2 tasks
+Stage 140 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 140.0 (TID 61, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 140.0 (TID 61)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 140.0 (TID 61). 983 bytes result sent to driver
+Stage 138 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 138.0 (TID 62, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Finished task 0.0 in stage 140.0 (TID 61) in 32 ms on localhost (executor driver) (1/2)
+Running task 0.0 in stage 138.0 (TID 62)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 138.0 (TID 62). 983 bytes result sent to driver
+Starting task 1.0 in stage 138.0 (TID 63, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 138.0 (TID 63)
+Finished task 0.0 in stage 138.0 (TID 62) in 25 ms on localhost (executor driver) (1/2)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 138.0 (TID 63). 983 bytes result sent to driver
+Starting task 1.0 in stage 140.0 (TID 64, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 140.0 (TID 64)
+Finished task 1.0 in stage 138.0 (TID 63) in 27 ms on localhost (executor driver) (2/2)
+Removed TaskSet 138.0, whose tasks have all completed, from pool 
+ShuffleMapStage 138 (parallelize at PageRank.scala:53) finished in 0.071 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 140)
+waiting: Set(ResultStage 143, ShuffleMapStage 141, ShuffleMapStage 142)
+failed: Set()
+Submitting ShuffleMapStage 141 (MapPartitionsRDD[64] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_39 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_39_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_39_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 39 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 141 (MapPartitionsRDD[64] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 141.0 with 2 tasks
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 140.0 (TID 64). 983 bytes result sent to driver
+Starting task 0.0 in stage 141.0 (TID 65, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Finished task 1.0 in stage 140.0 (TID 64) in 22 ms on localhost (executor driver) (2/2)
+Removed TaskSet 140.0, whose tasks have all completed, from pool 
+Running task 0.0 in stage 141.0 (TID 65)
+ShuffleMapStage 140 (parallelize at PageRank.scala:53) finished in 0.090 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 141)
+waiting: Set(ResultStage 143, ShuffleMapStage 142)
+failed: Set()
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 141.0 (TID 65). 1327 bytes result sent to driver
+Starting task 1.0 in stage 141.0 (TID 66, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Running task 1.0 in stage 141.0 (TID 66)
+Finished task 0.0 in stage 141.0 (TID 65) in 75 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 141.0 (TID 66). 1327 bytes result sent to driver
+Finished task 1.0 in stage 141.0 (TID 66) in 50 ms on localhost (executor driver) (2/2)
+Removed TaskSet 141.0, whose tasks have all completed, from pool 
+ShuffleMapStage 141 (map at PageRank.scala:81) finished in 0.138 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 143, ShuffleMapStage 142)
+failed: Set()
+Submitting ShuffleMapStage 142 (MapPartitionsRDD[68] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_40 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_40_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_40_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 40 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 142 (MapPartitionsRDD[68] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 142.0 with 2 tasks
+Starting task 0.0 in stage 142.0 (TID 67, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 142.0 (TID 67)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 142.0 (TID 67). 1327 bytes result sent to driver
+Starting task 1.0 in stage 142.0 (TID 68, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Running task 1.0 in stage 142.0 (TID 68)
+Finished task 0.0 in stage 142.0 (TID 67) in 56 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 142.0 (TID 68). 1327 bytes result sent to driver
+Finished task 1.0 in stage 142.0 (TID 68) in 56 ms on localhost (executor driver) (2/2)
+Removed TaskSet 142.0, whose tasks have all completed, from pool 
+ShuffleMapStage 142 (flatMap at PageRank.scala:72) finished in 0.116 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 143)
+failed: Set()
+Submitting ResultStage 143 (ShuffledRDD[69] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_41 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_41_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_41_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 41 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 143 (ShuffledRDD[69] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 143.0 with 1 tasks
+Starting task 0.0 in stage 143.0 (TID 69, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 143.0 (TID 69)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 143.0 (TID 69). 1349 bytes result sent to driver
+Finished task 0.0 in stage 143.0 (TID 69) in 16 ms on localhost (executor driver) (1/1)
+Removed TaskSet 143.0, whose tasks have all completed, from pool 
+ResultStage 143 (lookup at PageRank.scala:76) finished in 0.019 s
+Job 7 finished: lookup at PageRank.scala:76, took 0.353723 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 73 (map at PageRank.scala:81)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 77 (flatMap at PageRank.scala:72)
+Got job 8 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 179 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 178)
+Missing parents: List(ShuffleMapStage 178)
+Submitting ShuffleMapStage 174 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_42 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_42_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_42_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 42 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 174 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 174.0 with 2 tasks
+Submitting ShuffleMapStage 177 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_43 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_43_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_43_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 43 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 177 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 177.0 with 2 tasks
+Stage 174 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 174.0 (TID 70, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 174.0 (TID 70)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 174.0 (TID 70). 983 bytes result sent to driver
+Starting task 1.0 in stage 174.0 (TID 71, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 174.0 (TID 71)
+Finished task 0.0 in stage 174.0 (TID 70) in 34 ms on localhost (executor driver) (1/2)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 174.0 (TID 71). 983 bytes result sent to driver
+Stage 177 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 177.0 (TID 72, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Finished task 1.0 in stage 174.0 (TID 71) in 32 ms on localhost (executor driver) (2/2)
+Removed TaskSet 174.0, whose tasks have all completed, from pool 
+ShuffleMapStage 174 (parallelize at PageRank.scala:53) finished in 0.068 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 177)
+waiting: Set(ResultStage 179, ShuffleMapStage 176, ShuffleMapStage 178)
+failed: Set()
+Submitting ShuffleMapStage 176 (MapPartitionsRDD[73] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_44 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_44_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_44_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 44 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 176 (MapPartitionsRDD[73] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 176.0 with 2 tasks
+Running task 0.0 in stage 177.0 (TID 72)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 177.0 (TID 72). 983 bytes result sent to driver
+Starting task 0.0 in stage 176.0 (TID 73, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Finished task 0.0 in stage 177.0 (TID 72) in 39 ms on localhost (executor driver) (1/2)
+Running task 0.0 in stage 176.0 (TID 73)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Finished task 0.0 in stage 176.0 (TID 73). 1327 bytes result sent to driver
+Starting task 1.0 in stage 176.0 (TID 74, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Finished task 0.0 in stage 176.0 (TID 73) in 91 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 176.0 (TID 74)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Cleaned accumulator 683
+Cleaned accumulator 877
+Cleaned accumulator 922
+Cleaned accumulator 736
+Cleaned accumulator 718
+Cleaned accumulator 730
+Cleaned accumulator 785
+Cleaned accumulator 875
+Removed broadcast_34_piece0 on 10.110.21.151:56238 in memory (size: 3.1 KB, free: 911.1 MB)
+Cleaned accumulator 709
+Cleaned accumulator 852
+Cleaned accumulator 953
+Cleaned accumulator 767
+Cleaned accumulator 751
+Removed broadcast_39_piece0 on 10.110.21.151:56238 in memory (size: 3.1 KB, free: 911.1 MB)
+Cleaned accumulator 910
+Removed broadcast_40_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Cleaned accumulator 913
+Cleaned accumulator 693
+Cleaned accumulator 741
+Cleaned accumulator 735
+Cleaned accumulator 909
+Cleaned accumulator 903
+Cleaned accumulator 905
+Cleaned accumulator 879
+Cleaned accumulator 695
+Removed broadcast_37_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 832
+Cleaned accumulator 930
+Cleaned accumulator 931
+Cleaned accumulator 777
+Cleaned accumulator 949
+Cleaned accumulator 816
+Cleaned accumulator 933
+Cleaned accumulator 806
+Cleaned accumulator 864
+Cleaned accumulator 723
+Cleaned accumulator 939
+Cleaned accumulator 707
+Cleaned accumulator 855
+Removed broadcast_30_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Cleaned accumulator 784
+Cleaned accumulator 769
+Cleaned accumulator 675
+Cleaned accumulator 916
+Cleaned accumulator 896
+Cleaned accumulator 836
+Cleaned accumulator 950
+Cleaned accumulator 731
+Cleaned accumulator 696
+Removed broadcast_35_piece0 on 10.110.21.151:56238 in memory (size: 2.3 KB, free: 911.1 MB)
+Cleaned accumulator 971
+Cleaned accumulator 748
+Cleaned accumulator 742
+Cleaned accumulator 927
+Cleaned accumulator 863
+Cleaned accumulator 826
+Cleaned accumulator 921
+Cleaned accumulator 972
+Cleaned accumulator 734
+Cleaned accumulator 729
+Cleaned accumulator 934
+Cleaned accumulator 823
+Cleaned accumulator 965
+Cleaned accumulator 830
+Cleaned accumulator 706
+Cleaned accumulator 838
+Cleaned accumulator 833
+Removed broadcast_36_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Cleaned accumulator 912
+Cleaned accumulator 694
+Cleaned accumulator 760
+Cleaned accumulator 883
+Cleaned accumulator 874
+Cleaned accumulator 940
+Cleaned accumulator 753
+Cleaned accumulator 856
+Cleaned accumulator 951
+Cleaned accumulator 919
+Cleaned accumulator 961
+Cleaned accumulator 752
+Cleaned accumulator 895
+Cleaned accumulator 962
+Cleaned accumulator 884
+Removed broadcast_33_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 853
+Cleaned accumulator 899
+Cleaned accumulator 914
+Cleaned accumulator 861
+Cleaned accumulator 790
+Cleaned accumulator 869
+Cleaned accumulator 681
+Cleaned accumulator 765
+Cleaned accumulator 868
+Cleaned accumulator 722
+Cleaned accumulator 802
+Cleaned accumulator 824
+Cleaned accumulator 860
+Cleaned accumulator 818
+Cleaned accumulator 744
+Cleaned accumulator 842
+Cleaned accumulator 813
+Cleaned accumulator 717
+Cleaned accumulator 770
+Cleaned accumulator 897
+Cleaned accumulator 814
+Cleaned accumulator 908
+Cleaned accumulator 840
+Cleaned accumulator 817
+Cleaned accumulator 893
+Cleaned accumulator 789
+Cleaned accumulator 880
+Cleaned accumulator 945
+Cleaned accumulator 698
+Cleaned accumulator 870
+Removed broadcast_42_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 936
+Cleaned accumulator 851
+Cleaned accumulator 759
+Cleaned accumulator 716
+Cleaned accumulator 764
+Cleaned accumulator 948
+Cleaned accumulator 682
+Cleaned accumulator 763
+Cleaned accumulator 837
+Cleaned accumulator 688
+Cleaned accumulator 871
+Cleaned accumulator 775
+Cleaned accumulator 720
+Cleaned accumulator 791
+Cleaned accumulator 829
+Cleaned accumulator 942
+Cleaned accumulator 917
+Cleaned accumulator 947
+Cleaned accumulator 773
+Cleaned accumulator 779
+Cleaned accumulator 901
+Cleaned accumulator 827
+Cleaned accumulator 967
+Cleaned accumulator 679
+Cleaned accumulator 858
+Cleaned accumulator 724
+Cleaned accumulator 809
+Cleaned accumulator 957
+Cleaned accumulator 876
+Cleaned accumulator 788
+Cleaned accumulator 804
+Cleaned accumulator 966
+Cleaned accumulator 719
+Cleaned accumulator 684
+Cleaned accumulator 924
+Cleaned accumulator 885
+Cleaned accumulator 689
+Cleaned accumulator 782
+Cleaned accumulator 846
+Removed broadcast_31_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Cleaned accumulator 686
+Cleaned accumulator 825
+Cleaned accumulator 839
+Cleaned accumulator 974
+Cleaned accumulator 733
+Cleaned accumulator 859
+Cleaned accumulator 677
+Cleaned accumulator 915
+Cleaned accumulator 958
+Cleaned accumulator 848
+Cleaned accumulator 963
+Cleaned accumulator 746
+Removed broadcast_41_piece0 on 10.110.21.151:56238 in memory (size: 2.0 KB, free: 911.1 MB)
+Cleaned accumulator 772
+Cleaned accumulator 793
+Cleaned accumulator 815
+Cleaned accumulator 952
+Cleaned accumulator 857
+Cleaned accumulator 768
+Cleaned accumulator 872
+Cleaned accumulator 692
+Cleaned accumulator 776
+Cleaned accumulator 708
+Cleaned accumulator 894
+Removed broadcast_38_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 854
+Cleaned accumulator 900
+Cleaned accumulator 873
+Cleaned accumulator 954
+Cleaned accumulator 850
+Cleaned accumulator 743
+Cleaned accumulator 865
+Cleaned accumulator 787
+Cleaned accumulator 803
+Cleaned accumulator 676
+Cleaned accumulator 687
+Removed broadcast_29_piece0 on 10.110.21.151:56238 in memory (size: 3.1 KB, free: 911.1 MB)
+Cleaned accumulator 964
+Cleaned accumulator 713
+Cleaned accumulator 678
+Cleaned accumulator 946
+Cleaned accumulator 928
+Cleaned accumulator 929
+Cleaned accumulator 835
+Cleaned accumulator 888
+Cleaned accumulator 726
+Cleaned accumulator 923
+Cleaned accumulator 867
+Cleaned accumulator 904
+Cleaned accumulator 911
+Cleaned accumulator 749
+Cleaned accumulator 710
+Cleaned accumulator 820
+Cleaned accumulator 960
+Cleaned accumulator 932
+Cleaned accumulator 711
+Cleaned accumulator 792
+Cleaned accumulator 740
+Cleaned accumulator 968
+Cleaned accumulator 801
+Cleaned accumulator 800
+Cleaned accumulator 878
+Cleaned accumulator 843
+Cleaned accumulator 701
+Cleaned accumulator 970
+Cleaned accumulator 862
+Cleaned accumulator 737
+Cleaned accumulator 796
+Cleaned accumulator 902
+Cleaned accumulator 705
+Cleaned accumulator 918
+Cleaned accumulator 799
+Cleaned accumulator 715
+Cleaned accumulator 690
+Cleaned accumulator 935
+Cleaned accumulator 807
+Cleaned accumulator 906
+Cleaned accumulator 956
+Cleaned accumulator 866
+Cleaned accumulator 712
+Cleaned accumulator 841
+Cleaned accumulator 941
+Cleaned accumulator 794
+Cleaned accumulator 750
+Cleaned accumulator 747
+Cleaned accumulator 847
+Cleaned accumulator 721
+Cleaned accumulator 758
+Cleaned accumulator 937
+Cleaned accumulator 849
+Cleaned accumulator 728
+Cleaned accumulator 959
+Cleaned accumulator 955
+Cleaned accumulator 778
+Cleaned accumulator 808
+Cleaned accumulator 727
+Cleaned accumulator 780
+Cleaned accumulator 938
+Cleaned accumulator 738
+Cleaned accumulator 754
+Cleaned accumulator 714
+Cleaned accumulator 887
+Cleaned accumulator 831
+Cleaned accumulator 889
+Cleaned accumulator 845
+Cleaned accumulator 786
+Cleaned accumulator 761
+Cleaned accumulator 810
+Cleaned accumulator 892
+Cleaned accumulator 703
+Cleaned accumulator 771
+Removed broadcast_32_piece0 on 10.110.21.151:56238 in memory (size: 1310.0 B, free: 911.1 MB)
+Cleaned accumulator 811
+Cleaned accumulator 691
+Cleaned accumulator 702
+Cleaned accumulator 943
+Cleaned accumulator 844
+Cleaned accumulator 925
+Cleaned accumulator 926
+Cleaned accumulator 685
+Cleaned accumulator 920
+Cleaned accumulator 828
+Cleaned accumulator 756
+Cleaned accumulator 725
+Cleaned accumulator 821
+Cleaned accumulator 834
+Cleaned accumulator 797
+Cleaned accumulator 812
+Cleaned accumulator 907
+Cleaned accumulator 973
+Cleaned accumulator 697
+Cleaned accumulator 774
+Cleaned accumulator 732
+Cleaned accumulator 766
+Cleaned accumulator 890
+Cleaned accumulator 680
+Cleaned accumulator 757
+Cleaned accumulator 795
+Cleaned accumulator 819
+Cleaned accumulator 898
+Cleaned accumulator 944
+Cleaned accumulator 881
+Cleaned accumulator 969
+Cleaned accumulator 762
+Cleaned accumulator 755
+Cleaned accumulator 739
+Cleaned accumulator 882
+Cleaned accumulator 781
+Cleaned accumulator 805
+Cleaned accumulator 700
+Cleaned accumulator 699
+Cleaned accumulator 886
+Cleaned accumulator 798
+Cleaned accumulator 704
+Cleaned accumulator 783
+Cleaned accumulator 745
+Cleaned accumulator 891
+Cleaned accumulator 822
+Finished task 1.0 in stage 176.0 (TID 74). 1370 bytes result sent to driver
+Starting task 1.0 in stage 177.0 (TID 75, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 177.0 (TID 75)
+Finished task 1.0 in stage 176.0 (TID 74) in 87 ms on localhost (executor driver) (2/2)
+Removed TaskSet 176.0, whose tasks have all completed, from pool 
+ShuffleMapStage 176 (map at PageRank.scala:81) finished in 0.206 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 177)
+waiting: Set(ResultStage 179, ShuffleMapStage 178)
+failed: Set()
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 177.0 (TID 75). 983 bytes result sent to driver
+Finished task 1.0 in stage 177.0 (TID 75) in 25 ms on localhost (executor driver) (2/2)
+Removed TaskSet 177.0, whose tasks have all completed, from pool 
+ShuffleMapStage 177 (parallelize at PageRank.scala:53) finished in 0.283 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 179, ShuffleMapStage 178)
+failed: Set()
+Submitting ShuffleMapStage 178 (MapPartitionsRDD[77] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_45 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_45_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_45_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 45 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 178 (MapPartitionsRDD[77] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 178.0 with 2 tasks
+Starting task 0.0 in stage 178.0 (TID 76, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 178.0 (TID 76)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 178.0 (TID 76). 1284 bytes result sent to driver
+Starting task 1.0 in stage 178.0 (TID 77, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 178.0 (TID 76) in 60 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 178.0 (TID 77)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 178.0 (TID 77). 1327 bytes result sent to driver
+Finished task 1.0 in stage 178.0 (TID 77) in 57 ms on localhost (executor driver) (2/2)
+Removed TaskSet 178.0, whose tasks have all completed, from pool 
+ShuffleMapStage 178 (flatMap at PageRank.scala:72) finished in 0.121 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 179)
+failed: Set()
+Submitting ResultStage 179 (ShuffledRDD[78] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_46 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_46_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_46_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 46 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 179 (ShuffledRDD[78] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 179.0 with 1 tasks
+Starting task 0.0 in stage 179.0 (TID 78, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 179.0 (TID 78)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 179.0 (TID 78). 1306 bytes result sent to driver
+Finished task 0.0 in stage 179.0 (TID 78) in 18 ms on localhost (executor driver) (1/1)
+Removed TaskSet 179.0, whose tasks have all completed, from pool 
+ResultStage 179 (lookup at PageRank.scala:76) finished in 0.021 s
+Job 8 finished: lookup at PageRank.scala:76, took 0.443119 s
+Starting job: lookup at PageRank.scala:76
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 82 (map at PageRank.scala:81)
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Registering RDD 86 (flatMap at PageRank.scala:72)
+Got job 9 (lookup at PageRank.scala:76) with 1 output partitions
+Final stage: ResultStage 219 (lookup at PageRank.scala:76)
+Parents of final stage: List(ShuffleMapStage 218)
+Missing parents: List(ShuffleMapStage 218)
+Submitting ShuffleMapStage 215 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_47 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_47_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_47_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 47 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 215 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 215.0 with 2 tasks
+Submitting ShuffleMapStage 217 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_48 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_48_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_48_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 48 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 217 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 217.0 with 2 tasks
+Stage 215 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 215.0 (TID 79, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 215.0 (TID 79)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 215.0 (TID 79). 983 bytes result sent to driver
+Starting task 1.0 in stage 215.0 (TID 80, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 215.0 (TID 80)
+Finished task 0.0 in stage 215.0 (TID 79) in 33 ms on localhost (executor driver) (1/2)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 215.0 (TID 80). 983 bytes result sent to driver
+Stage 217 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 217.0 (TID 81, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 217.0 (TID 81)
+Finished task 1.0 in stage 215.0 (TID 80) in 28 ms on localhost (executor driver) (2/2)
+Removed TaskSet 215.0, whose tasks have all completed, from pool 
+ShuffleMapStage 215 (parallelize at PageRank.scala:53) finished in 0.055 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 217)
+waiting: Set(ResultStage 219, ShuffleMapStage 216, ShuffleMapStage 218)
+failed: Set()
+Submitting ShuffleMapStage 216 (MapPartitionsRDD[82] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_49 stored as values in memory (estimated size 5.6 KB, free 911.1 MB)
+Block broadcast_49_piece0 stored as bytes in memory (estimated size 3.1 KB, free 911.1 MB)
+Added broadcast_49_piece0 in memory on 10.110.21.151:56238 (size: 3.1 KB, free: 911.1 MB)
+Created broadcast 49 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 216 (MapPartitionsRDD[82] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 216.0 with 2 tasks
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 217.0 (TID 81). 983 bytes result sent to driver
+Starting task 0.0 in stage 216.0 (TID 82, localhost, executor driver, partition 0, ANY, 7855 bytes)
+Running task 0.0 in stage 216.0 (TID 82)
+Finished task 0.0 in stage 217.0 (TID 81) in 20 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 216.0 (TID 82). 1327 bytes result sent to driver
+Starting task 1.0 in stage 216.0 (TID 83, localhost, executor driver, partition 1, ANY, 7855 bytes)
+Finished task 0.0 in stage 216.0 (TID 82) in 53 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 216.0 (TID 83)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 216.0 (TID 83). 1284 bytes result sent to driver
+Starting task 1.0 in stage 217.0 (TID 84, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Finished task 1.0 in stage 216.0 (TID 83) in 81 ms on localhost (executor driver) (2/2)
+Removed TaskSet 216.0, whose tasks have all completed, from pool 
+Running task 1.0 in stage 217.0 (TID 84)
+ShuffleMapStage 216 (map at PageRank.scala:81) finished in 0.147 s
+looking for newly runnable stages
+running: Set(ShuffleMapStage 217)
+waiting: Set(ResultStage 219, ShuffleMapStage 218)
+failed: Set()
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 217.0 (TID 84). 983 bytes result sent to driver
+Finished task 1.0 in stage 217.0 (TID 84) in 26 ms on localhost (executor driver) (2/2)
+Removed TaskSet 217.0, whose tasks have all completed, from pool 
+ShuffleMapStage 217 (parallelize at PageRank.scala:53) finished in 0.216 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 219, ShuffleMapStage 218)
+failed: Set()
+Submitting ShuffleMapStage 218 (MapPartitionsRDD[86] at flatMap at PageRank.scala:72), which has no missing parents
+Block broadcast_50 stored as values in memory (estimated size 4.0 KB, free 911.1 MB)
+Block broadcast_50_piece0 stored as bytes in memory (estimated size 2.3 KB, free 911.1 MB)
+Added broadcast_50_piece0 in memory on 10.110.21.151:56238 (size: 2.3 KB, free: 911.1 MB)
+Created broadcast 50 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 218 (MapPartitionsRDD[86] at flatMap at PageRank.scala:72) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 218.0 with 2 tasks
+Starting task 0.0 in stage 218.0 (TID 85, localhost, executor driver, partition 0, PROCESS_LOCAL, 7701 bytes)
+Running task 0.0 in stage 218.0 (TID 85)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 218.0 (TID 85). 1327 bytes result sent to driver
+Starting task 1.0 in stage 218.0 (TID 86, localhost, executor driver, partition 1, PROCESS_LOCAL, 7701 bytes)
+Finished task 0.0 in stage 218.0 (TID 85) in 57 ms on localhost (executor driver) (1/2)
+Running task 1.0 in stage 218.0 (TID 86)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 218.0 (TID 86). 1284 bytes result sent to driver
+Finished task 1.0 in stage 218.0 (TID 86) in 69 ms on localhost (executor driver) (2/2)
+Removed TaskSet 218.0, whose tasks have all completed, from pool 
+ShuffleMapStage 218 (flatMap at PageRank.scala:72) finished in 0.128 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 219)
+failed: Set()
+Submitting ResultStage 219 (ShuffledRDD[87] at reduceByKey at PageRank.scala:74), which has no missing parents
+Block broadcast_51 stored as values in memory (estimated size 3.3 KB, free 911.1 MB)
+Block broadcast_51_piece0 stored as bytes in memory (estimated size 2.0 KB, free 911.1 MB)
+Added broadcast_51_piece0 in memory on 10.110.21.151:56238 (size: 2.0 KB, free: 911.1 MB)
+Created broadcast 51 from broadcast at DAGScheduler.scala:1039
+Submitting 1 missing tasks from ResultStage 219 (ShuffledRDD[87] at reduceByKey at PageRank.scala:74) (first 15 tasks are for partitions Vector(0))
+Adding task set 219.0 with 1 tasks
+Starting task 0.0 in stage 219.0 (TID 87, localhost, executor driver, partition 0, ANY, 7649 bytes)
+Running task 0.0 in stage 219.0 (TID 87)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 219.0 (TID 87). 1349 bytes result sent to driver
+Finished task 0.0 in stage 219.0 (TID 87) in 19 ms on localhost (executor driver) (1/1)
+Removed TaskSet 219.0, whose tasks have all completed, from pool 
+ResultStage 219 (lookup at PageRank.scala:76) finished in 0.022 s
+Job 9 finished: lookup at PageRank.scala:76, took 0.377732 s
+(2) MapPartitionsRDD[91] at map at PageRank.scala:81 []
+ |  MapPartitionsRDD[90] at leftOuterJoin at PageRank.scala:81 []
+ |  MapPartitionsRDD[89] at leftOuterJoin at PageRank.scala:81 []
+ |  CoGroupedRDD[88] at leftOuterJoin at PageRank.scala:81 []
+ +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+ |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+ |  ShuffledRDD[87] at reduceByKey at PageRank.scala:74 []
+ +-(2) MapPartitionsRDD[86] at flatMap at PageRank.scala:72 []
+    |  MapPartitionsRDD[85] at join at PageRank.scala:72 []
+    |  MapPartitionsRDD[84] at join at PageRank.scala:72 []
+    |  CoGroupedRDD[83] at join at PageRank.scala:72 []
+    +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+    |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+    +-(2) MapPartitionsRDD[82] at map at PageRank.scala:81 []
+       |  MapPartitionsRDD[81] at leftOuterJoin at PageRank.scala:81 []
+       |  MapPartitionsRDD[80] at leftOuterJoin at PageRank.scala:81 []
+       |  CoGroupedRDD[79] at leftOuterJoin at PageRank.scala:81 []
+       +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+       |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+       |  ShuffledRDD[78] at reduceByKey at PageRank.scala:74 []
+       +-(2) MapPartitionsRDD[77] at flatMap at PageRank.scala:72 []
+          |  MapPartitionsRDD[76] at join at PageRank.scala:72 []
+          |  MapPartitionsRDD[75] at join at PageRank.scala:72 []
+          |  CoGroupedRDD[74] at join at PageRank.scala:72 []
+          +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+          |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+          +-(2) MapPartitionsRDD[73] at map at PageRank.scala:81 []
+             |  MapPartitionsRDD[72] at leftOuterJoin at PageRank.scala:81 []
+             |  MapPartitionsRDD[71] at leftOuterJoin at PageRank.scala:81 []
+             |  CoGroupedRDD[70] at leftOuterJoin at PageRank.scala:81 []
+             +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+             |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+             |  ShuffledRDD[69] at reduceByKey at PageRank.scala:74 []
+             +-(2) MapPartitionsRDD[68] at flatMap at PageRank.scala:72 []
+                |  MapPartitionsRDD[67] at join at PageRank.scala:72 []
+                |  MapPartitionsRDD[66] at join at PageRank.scala:72 []
+                |  CoGroupedRDD[65] at join at PageRank.scala:72 []
+                +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                +-(2) MapPartitionsRDD[64] at map at PageRank.scala:81 []
+                   |  MapPartitionsRDD[63] at leftOuterJoin at PageRank.scala:81 []
+                   |  MapPartitionsRDD[62] at leftOuterJoin at PageRank.scala:81 []
+                   |  CoGroupedRDD[61] at leftOuterJoin at PageRank.scala:81 []
+                   +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                   |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                   |  ShuffledRDD[60] at reduceByKey at PageRank.scala:74 []
+                   +-(2) MapPartitionsRDD[59] at flatMap at PageRank.scala:72 []
+                      |  MapPartitionsRDD[58] at join at PageRank.scala:72 []
+                      |  MapPartitionsRDD[57] at join at PageRank.scala:72 []
+                      |  CoGroupedRDD[56] at join at PageRank.scala:72 []
+                      +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                      |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                      +-(2) MapPartitionsRDD[55] at map at PageRank.scala:81 []
+                         |  MapPartitionsRDD[54] at leftOuterJoin at PageRank.scala:81 []
+                         |  MapPartitionsRDD[53] at leftOuterJoin at PageRank.scala:81 []
+                         |  CoGroupedRDD[52] at leftOuterJoin at PageRank.scala:81 []
+                         +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                         |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                         |  ShuffledRDD[51] at reduceByKey at PageRank.scala:74 []
+                         +-(2) MapPartitionsRDD[50] at flatMap at PageRank.scala:72 []
+                            |  MapPartitionsRDD[49] at join at PageRank.scala:72 []
+                            |  MapPartitionsRDD[48] at join at PageRank.scala:72 []
+                            |  CoGroupedRDD[47] at join at PageRank.scala:72 []
+                            +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                            |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                            +-(2) MapPartitionsRDD[46] at map at PageRank.scala:81 []
+                               |  MapPartitionsRDD[45] at leftOuterJoin at PageRank.scala:81 []
+                               |  MapPartitionsRDD[44] at leftOuterJoin at PageRank.scala:81 []
+                               |  CoGroupedRDD[43] at leftOuterJoin at PageRank.scala:81 []
+                               +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                               |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                               |  ShuffledRDD[42] at reduceByKey at PageRank.scala:74 []
+                               +-(2) MapPartitionsRDD[41] at flatMap at PageRank.scala:72 []
+                                  |  MapPartitionsRDD[40] at join at PageRank.scala:72 []
+                                  |  MapPartitionsRDD[39] at join at PageRank.scala:72 []
+                                  |  CoGroupedRDD[38] at join at PageRank.scala:72 []
+                                  +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                  |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                  +-(2) MapPartitionsRDD[37] at map at PageRank.scala:81 []
+                                     |  MapPartitionsRDD[36] at leftOuterJoin at PageRank.scala:81 []
+                                     |  MapPartitionsRDD[35] at leftOuterJoin at PageRank.scala:81 []
+                                     |  CoGroupedRDD[34] at leftOuterJoin at PageRank.scala:81 []
+                                     +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                     |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                     |  ShuffledRDD[33] at reduceByKey at PageRank.scala:74 []
+                                     +-(2) MapPartitionsRDD[32] at flatMap at PageRank.scala:72 []
+                                        |  MapPartitionsRDD[31] at join at PageRank.scala:72 []
+                                        |  MapPartitionsRDD[30] at join at PageRank.scala:72 []
+                                        |  CoGroupedRDD[29] at join at PageRank.scala:72 []
+                                        +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                        |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                        +-(2) MapPartitionsRDD[28] at map at PageRank.scala:81 []
+                                           |  MapPartitionsRDD[27] at leftOuterJoin at PageRank.scala:81 []
+                                           |  MapPartitionsRDD[26] at leftOuterJoin at PageRank.scala:81 []
+                                           |  CoGroupedRDD[25] at leftOuterJoin at PageRank.scala:81 []
+                                           +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                           |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                           |  ShuffledRDD[24] at reduceByKey at PageRank.scala:74 []
+                                           +-(2) MapPartitionsRDD[23] at flatMap at PageRank.scala:72 []
+                                              |  MapPartitionsRDD[22] at join at PageRank.scala:72 []
+                                              |  MapPartitionsRDD[21] at join at PageRank.scala:72 []
+                                              |  CoGroupedRDD[20] at join at PageRank.scala:72 []
+                                              +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                              |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                              +-(2) MapPartitionsRDD[19] at map at PageRank.scala:81 []
+                                                 |  MapPartitionsRDD[18] at leftOuterJoin at PageRank.scala:81 []
+                                                 |  MapPartitionsRDD[17] at leftOuterJoin at PageRank.scala:81 []
+                                                 |  CoGroupedRDD[16] at leftOuterJoin at PageRank.scala:81 []
+                                                 +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                                 |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                                 |  ShuffledRDD[15] at reduceByKey at PageRank.scala:74 []
+                                                 +-(2) MapPartitionsRDD[14] at flatMap at PageRank.scala:72 []
+                                                    |  MapPartitionsRDD[13] at join at PageRank.scala:72 []
+                                                    |  MapPartitionsRDD[12] at join at PageRank.scala:72 []
+                                                    |  CoGroupedRDD[11] at join at PageRank.scala:72 []
+                                                    +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                                    |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                                    +-(2) MapPartitionsRDD[10] at map at PageRank.scala:81 []
+                                                       |  MapPartitionsRDD[9] at leftOuterJoin at PageRank.scala:81 []
+                                                       |  MapPartitionsRDD[8] at leftOuterJoin at PageRank.scala:81 []
+                                                       |  CoGroupedRDD[7] at leftOuterJoin at PageRank.scala:81 []
+                                                       +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                                       |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                                       |  ShuffledRDD[6] at reduceByKey at PageRank.scala:74 []
+                                                       +-(2) MapPartitionsRDD[5] at flatMap at PageRank.scala:72 []
+                                                          |  MapPartitionsRDD[4] at join at PageRank.scala:72 []
+                                                          |  MapPartitionsRDD[3] at join at PageRank.scala:72 []
+                                                          |  CoGroupedRDD[2] at join at PageRank.scala:72 []
+                                                          +-(2) ParallelCollectionRDD[0] at parallelize at PageRank.scala:53 []
+                                                          |  |      CachedPartitions: 2; MemorySize: 817.3 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+                                                          +-(2) ParallelCollectionRDD[1] at parallelize at PageRank.scala:62 []
+                                                             |      CachedPartitions: 2; MemorySize: 351.6 KB; ExternalBlockStoreSize: 0.0 B; DiskSize: 0.0 B
+Starting job: collect at PageRank.scala:99
+Registering RDD 0 (parallelize at PageRank.scala:53)
+Got job 10 (collect at PageRank.scala:99) with 2 output partitions
+Final stage: ResultStage 260 (collect at PageRank.scala:99)
+Parents of final stage: List(ShuffleMapStage 259, ShuffleMapStage 258)
+Missing parents: List(ShuffleMapStage 259)
+Submitting ShuffleMapStage 259 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53), which has no missing parents
+Block broadcast_52 stored as values in memory (estimated size 2032.0 B, free 911.1 MB)
+Block broadcast_52_piece0 stored as bytes in memory (estimated size 1310.0 B, free 911.1 MB)
+Added broadcast_52_piece0 in memory on 10.110.21.151:56238 (size: 1310.0 B, free: 911.1 MB)
+Created broadcast 52 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ShuffleMapStage 259 (ParallelCollectionRDD[0] at parallelize at PageRank.scala:53) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 259.0 with 2 tasks
+Stage 259 contains a task of very large size (192 KB). The maximum recommended task size is 100 KB.
+Starting task 0.0 in stage 259.0 (TID 88, localhost, executor driver, partition 0, PROCESS_LOCAL, 197125 bytes)
+Running task 0.0 in stage 259.0 (TID 88)
+Found block rdd_0_0 locally
+Finished task 0.0 in stage 259.0 (TID 88). 983 bytes result sent to driver
+Starting task 1.0 in stage 259.0 (TID 89, localhost, executor driver, partition 1, PROCESS_LOCAL, 197755 bytes)
+Running task 1.0 in stage 259.0 (TID 89)
+Finished task 0.0 in stage 259.0 (TID 88) in 31 ms on localhost (executor driver) (1/2)
+Found block rdd_0_1 locally
+Finished task 1.0 in stage 259.0 (TID 89). 983 bytes result sent to driver
+Finished task 1.0 in stage 259.0 (TID 89) in 18 ms on localhost (executor driver) (2/2)
+Removed TaskSet 259.0, whose tasks have all completed, from pool 
+ShuffleMapStage 259 (parallelize at PageRank.scala:53) finished in 0.045 s
+looking for newly runnable stages
+running: Set()
+waiting: Set(ResultStage 260)
+failed: Set()
+Submitting ResultStage 260 (MapPartitionsRDD[91] at map at PageRank.scala:81), which has no missing parents
+Block broadcast_53 stored as values in memory (estimated size 5.8 KB, free 911.1 MB)
+Block broadcast_53_piece0 stored as bytes in memory (estimated size 3.2 KB, free 911.1 MB)
+Added broadcast_53_piece0 in memory on 10.110.21.151:56238 (size: 3.2 KB, free: 911.1 MB)
+Created broadcast 53 from broadcast at DAGScheduler.scala:1039
+Submitting 2 missing tasks from ResultStage 260 (MapPartitionsRDD[91] at map at PageRank.scala:81) (first 15 tasks are for partitions Vector(0, 1))
+Adding task set 260.0 with 2 tasks
+Starting task 0.0 in stage 260.0 (TID 90, localhost, executor driver, partition 0, ANY, 7866 bytes)
+Running task 0.0 in stage 260.0 (TID 90)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 1 ms
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 0.0 in stage 260.0 (TID 90). 101783 bytes result sent to driver
+Starting task 1.0 in stage 260.0 (TID 91, localhost, executor driver, partition 1, ANY, 7866 bytes)
+Running task 1.0 in stage 260.0 (TID 91)
+Finished task 0.0 in stage 260.0 (TID 90) in 44 ms on localhost (executor driver) (1/2)
+Getting 2 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Getting 1 non-empty blocks out of 2 blocks
+Started 0 remote fetches in 0 ms
+Finished task 1.0 in stage 260.0 (TID 91). 101783 bytes result sent to driver
+Finished task 1.0 in stage 260.0 (TID 91) in 41 ms on localhost (executor driver) (2/2)
+Removed TaskSet 260.0, whose tasks have all completed, from pool 
+ResultStage 260 (collect at PageRank.scala:99) finished in 0.088 s
+Job 10 finished: collect at PageRank.scala:99, took 0.138917 s
+Invoking stop() from shutdown hook
+Stopped Spark@24bdb479{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+Stopped Spark web UI at http://10.110.21.151:4040
+MapOutputTrackerMasterEndpoint stopped!
+MemoryStore cleared
+BlockManager stopped
+BlockManagerMaster stopped
+OutputCommitCoordinator stopped!
+Successfully stopped SparkContext
+Shutdown hook called
+Deleting directory /private/var/folders/3r/5j1kl2790z35gg22t7q_g4sw0000gn/T/spark-c9257197-0764-4974-8b0a-dd919a19a736
